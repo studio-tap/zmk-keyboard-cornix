@@ -164,7 +164,7 @@
 &kp TAB              &kp Q              &kp W             &kp E             &kp R                &kp T                         &kp Y        &kp U                &kp I             &kp O              &kp P                 &kp MINUS
 &kp LGUI             &hm_l LCTRL A      &hm_l LALT S      &hm_l LGUI D      &hm_shift_l LSHFT F  &kp G                         &kp H        &hm_shift_r RSHFT J  &hm_r RGUI K      &hm_r RALT L       &hm_r RCTRL SEMI      &kp SQT
 &kp INTERNATIONAL_5  &hm_l LGUI Z       &kp X             &kp C             &kp V                &kp B         &none   &none   &kp N        &kp M                &kp COMMA         &kp DOT            &kp FSLH              &kp INTERNATIONAL_4
-&kp ESCAPE           &none              &kp LALT           &mo MAC_NUM       &kp LSHFT            &kp SPACE                     &kp RET      &kp BACKSPACE        &mo MAC_SYM       &kp DEL              &none                 &kp RCTRL
+&kp ESCAPE           &none              &kp LALT           &mo MAC_NUM       &kp LSHFT            &kp SPACE                     &kp RET      &kp BACKSPACE        &mo MAC_SYM       &kp DEL              &mo SWITCH            &kp RCTRL
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
         };
@@ -219,7 +219,7 @@
 &kp TAB              &kp Q              &kp W             &kp E             &kp R                &kp T                         &kp Y        &kp U                &kp I             &kp O              &kp P                 &mn_unds
 &kp LCTRL            &hm_l LCTRL A      &hm_l LALT S      &hm_l LCTRL D     &hm_shift_l LSHFT F  &kp G                         &kp H        &hm_shift_r RSHFT J  &hm_r RCTRL K     &hm_r RALT L       &sc_coln              &qt_dqt
 &kp INTERNATIONAL_5  &hm_l LGUI Z       &kp X             &kp C             &kp V                &kp B         &none   &none   &kp N        &kp M                &kp COMMA         &kp DOT            &kp FSLH              &kp INTERNATIONAL_4
-&kp ESCAPE           &none              &kp LALT           &mo WIN_NUM       &kp LSHFT            &kp SPACE                     &kp RET      &kp BACKSPACE        &mo WIN_SYM       &kp DEL              &none                 &kp RGUI
+&kp ESCAPE           &none              &kp LALT           &mo WIN_NUM       &kp LSHFT            &kp SPACE                     &kp RET      &kp BACKSPACE        &mo WIN_SYM       &kp DEL              &mo SWITCH            &kp RGUI
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
         };
