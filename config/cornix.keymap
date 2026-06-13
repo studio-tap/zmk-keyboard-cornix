@@ -271,7 +271,7 @@
         switch_layer {
             display-name = "Switch";
             bindings = <
-&none          &none  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none
+&none          &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &none  &none    &none  &none  &none  &none  &none  &none
 &none          &none  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none
 &to MAC_BASE   &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &to WIN_BASE
 &none          &none  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none
