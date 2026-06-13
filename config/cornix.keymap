@@ -125,6 +125,34 @@
             tapping-term-ms = <HM_TAPPING_TERM>;
             quick-tap-ms = <200>;
         };
+
+        sc_coln: semicolon_colon {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp SEMI>, <&kp SQT>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        mn_unds: minus_underscore {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp MINUS>, <&kp LS(INTERNATIONAL_1)>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        qt_dqt: quote_doublequote {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp LS(N7)>, <&kp LS(N2)>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        bs_pipe: backslash_pipe {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp INTERNATIONAL_1>, <&kp LS(INTERNATIONAL_3)>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
     };
 
     keymap {
@@ -136,7 +164,7 @@
 &kp TAB              &kp Q              &kp W             &kp E             &kp R                &kp T                         &kp Y        &kp U                &kp I             &kp O              &kp P                 &kp MINUS
 &kp LGUI             &hm_l LCTRL A      &hm_l LALT S      &hm_l LGUI D      &hm_shift_l LSHFT F  &kp G                         &kp H        &hm_shift_r RSHFT J  &hm_r RGUI K      &hm_r RALT L       &hm_r RCTRL SEMI      &kp SQT
 &kp INTERNATIONAL_5  &hm_l LGUI Z       &kp X             &kp C             &kp V                &kp B         &none   &none   &kp N        &kp M                &kp COMMA         &kp DOT            &kp FSLH              &kp INTERNATIONAL_4
-&none                &none              &lt SWITCH ESCAPE  &mo MAC_NUM       &kp LSHFT            &kp SPACE                     &kp RET      &kp BACKSPACE        &mo MAC_SYM       &none              &none                 &none
+&kp ESCAPE           &none              &kp LALT           &mo MAC_NUM       &kp LSHFT            &kp SPACE                     &kp RET      &kp BACKSPACE        &mo MAC_SYM       &kp DEL              &none                 &kp RCTRL
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
         };
@@ -188,10 +216,10 @@
         win_base_layer {
             display-name = "Win";
             bindings = <
-&kp TAB              &kp Q              &kp W             &kp E             &kp R                &kp T                         &kp Y        &kp U                &kp I             &kp O              &kp P                 &kp MINUS
-&kp LCTRL            &hm_l LCTRL A      &hm_l LALT S      &hm_l LCTRL D     &hm_shift_l LSHFT F  &kp G                         &kp H        &hm_shift_r RSHFT J  &hm_r RCTRL K     &hm_r RALT L       &hm_r RCTRL SEMI      &kp N7
+&kp TAB              &kp Q              &kp W             &kp E             &kp R                &kp T                         &kp Y        &kp U                &kp I             &kp O              &kp P                 &mn_unds
+&kp LCTRL            &hm_l LCTRL A      &hm_l LALT S      &hm_l LCTRL D     &hm_shift_l LSHFT F  &kp G                         &kp H        &hm_shift_r RSHFT J  &hm_r RCTRL K     &hm_r RALT L       &sc_coln              &qt_dqt
 &kp INTERNATIONAL_5  &hm_l LGUI Z       &kp X             &kp C             &kp V                &kp B         &none   &none   &kp N        &kp M                &kp COMMA         &kp DOT            &kp FSLH              &kp INTERNATIONAL_4
-&none                &none              &lt SWITCH ESCAPE  &mo WIN_NUM       &kp LSHFT            &kp SPACE                     &kp RET      &kp BACKSPACE        &mo WIN_SYM       &none              &none                 &none
+&kp ESCAPE           &none              &kp LALT           &mo WIN_NUM       &kp LSHFT            &kp SPACE                     &kp RET      &kp BACKSPACE        &mo WIN_SYM       &kp DEL              &none                 &kp RGUI
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
         };
@@ -201,7 +229,7 @@
             bindings = <
 &kp TAB              &kp LS(N1)         &kp LBKT          &kp LS(N3)        &kp LS(N4)           &kp LS(N5)                    &kp EQUAL    &kp LS(N6)           &kp LS(SQT)       &kp LS(N8)         &kp LS(N9)            &kp LS(EQUAL)
 &kp LCTRL            &kp A              &kp S             &kp D             &kp F                &kp G                         &none        &to WIN_MSE          &kp UP            &kp RBKT           &kp NON_US_HASH       &kp LS(LBKT)
-&kp INTERNATIONAL_5  &kp Z              &kp X             &kp C             &kp V                &kp B         &none   &none   &none        &kp LEFT             &kp DOWN          &kp RIGHT          &kp INTERNATIONAL_1   &kp INTERNATIONAL_4
+&kp INTERNATIONAL_5  &kp Z              &kp X             &kp C             &kp V                &kp B         &none   &none   &none        &kp LEFT             &kp DOWN          &kp RIGHT          &bs_pipe              &kp INTERNATIONAL_4
 &none                &none              &none              &none             &kp LSHFT            &kp SPACE                     &none        &none                &none             &none              &none                 &none
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
