@@ -201,8 +201,8 @@
             display-name = "Mac Mouse";
             bindings = <
 &kp TAB              &none              &none             &none             &kp R                &none                         &none        &none                &none             &none              &none                 &none
-&kp LGUI             &kp A              &kp S             &none             &kp F                &none                         &none        &none                &mmv MOVE_UP      &none              &msc SCRL_UP          &none
-&to MAC_BASE         &kp Z              &kp X             &kp C             &kp V                &none         &none   &none   &none        &mmv MOVE_LEFT       &mmv MOVE_DOWN    &mmv MOVE_RIGHT    &msc SCRL_DOWN        &to MAC_BASE
+&kp LGUI             &kp A              &kp S             &none             &kp F                &none                         &none        &none                &mmv MOVE_UP      &none              &msc SCRL_DOWN        &none
+&to MAC_BASE         &kp Z              &kp X             &kp C             &kp V                &none         &none   &none   &none        &mmv MOVE_LEFT       &mmv MOVE_DOWN    &mmv MOVE_RIGHT    &msc SCRL_UP          &to MAC_BASE
 &none                &none              &mo MAC_FINE       &none             &kp LSHFT            &kp SPACE                     &mkp MB1     &kp BACKSPACE        &mo MAC_FINE      &none              &none                 &none
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
@@ -212,7 +212,7 @@
             display-name = "Mac Fine";
             bindings = <
 &kp TAB              &none              &none             &none             &kp R                &none                         &none        &none                &none             &none              &none                 &none
-&kp LGUI             &kp A              &kp S             &none             &to MAC_MSE          &none                         &none        &msc SCRL_LEFT       &kp UP            &msc SCRL_RIGHT    &none                 &none
+&kp LGUI             &kp A              &kp S             &none             &to MAC_MSE          &none                         &none        &msc SCRL_RIGHT      &kp UP            &msc SCRL_LEFT     &none                 &none
 &kp INTERNATIONAL_5  &kp Z              &kp X             &kp C             &kp V                &none         &none   &none   &none        &kp LEFT             &kp DOWN          &kp RIGHT          &none                 &kp INTERNATIONAL_4
 &none                &none              &none              &none             &kp LSHFT            &kp SPACE                     &mkp MB2     &kp BACKSPACE        &none             &none              &none                 &none
             >;
